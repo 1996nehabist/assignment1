@@ -20,7 +20,11 @@ insert into ai_tools values
 select id from ai_tools  
 where technology in ("data science","python","mysql")
 group by id
-having count(distinct technology)=3;
+having count(distinct technology)=3; 
+
+# this command is giving the output as 1,3 the id
+
+##  second problem statement
 
 
 create table if not exists product_info(
@@ -52,3 +56,5 @@ insert into product_info_likes values
 select product_id from product_info
 where product_id not in 
 (select product_id from product_info_likes);
+
+# the above statement is giving the product_id as 103 
